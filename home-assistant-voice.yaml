@@ -1723,8 +1723,8 @@ micro_wake_word:
       #id: hey_jarvis
     #- model: hey_mycroft
       #id: hey_mycroft
-    - model: https://github.com/kahrendt/microWakeWord/releases/download/stop/stop.json
-      id: stop
+    #- model: https://github.com/kahrendt/microWakeWord/releases/download/stop/stop.json
+      #id: stop
       internal: true
     - model: https://raw.githubusercontent.com/Omega-sko/home-assistant-voice-pe/refs/heads/dev/wake-word-models/mWW/jarvis.json
       id: jarvis
