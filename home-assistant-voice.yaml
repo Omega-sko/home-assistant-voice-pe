@@ -1719,14 +1719,14 @@ micro_wake_word:
     gain_factor: 4
   stop_after_detection: false
   models:
-    - model: hey_jarvis
-      id: hey_jarvis
-    - model: hey_mycroft
-      id: hey_mycroft
+    #- model: hey_jarvis
+      #id: hey_jarvis
+    #- model: hey_mycroft
+      #id: hey_mycroft
     - model: https://github.com/kahrendt/microWakeWord/releases/download/stop/stop.json
       id: stop
       internal: true
-    - model: https://github.com/Omega-sko/home-assistant-voice-pe/blob/dev/wake-word-models/download/mWW/jarvis.json
+    - model: https://raw.githubusercontent.com/Omega-sko/home-assistant-voice-pe/refs/heads/dev/wake-word-models/mWW/jarvis.json
       id: jarvis
   vad:
   on_wake_word_detected:
@@ -1790,16 +1790,16 @@ select:
       # These cutoffs apply only to the specific models included in the firmware: okay_nabu@20241226.3, hey_jarvis@v2, hey_mycroft@v2
       lambda: |-
         if (x == "Slightly sensitive") {
-          id(hey_jarvis).set_probability_cutoff(247);   // 0.97 -> 0.563 FAPH on DipCo (Manifest's default)
-          id(hey_mycroft).set_probability_cutoff(253);  // 0.99 -> 0.567 FAPH on DipCo
+          #id(hey_jarvis).set_probability_cutoff(247);   // 0.97 -> 0.563 FAPH on DipCo (Manifest's default)
+          #id(hey_mycroft).set_probability_cutoff(253);  // 0.99 -> 0.567 FAPH on DipCo
           id(jarvis).set_probability_cutoff(247);   // 0.97 -> 0.563 FAPH on DipCo (Manifest's default)
         } else if (x == "Moderately sensitive") {
-          id(hey_jarvis).set_probability_cutoff(235);   // 0.92 -> 0.939 FAPH on DipCo
-          id(hey_mycroft).set_probability_cutoff(242);  // 0.95 -> 1.502 FAPH on DipCo (Manifest's default)
+          #id(hey_jarvis).set_probability_cutoff(235);   // 0.92 -> 0.939 FAPH on DipCo
+          #id(hey_mycroft).set_probability_cutoff(242);  // 0.95 -> 1.502 FAPH on DipCo (Manifest's default)
           id(jarvis).set_probability_cutoff(235);   // 0.92 -> 0.939 FAPH on DipCo
         } else if (x == "Very sensitive") {
-          id(hey_jarvis).set_probability_cutoff(212);   // 0.83 -> 1.502 FAPH on DipCo
-          id(hey_mycroft).set_probability_cutoff(237);  // 0.93 -> 1.878 FAPH on DipCo
+          #id(hey_jarvis).set_probability_cutoff(212);   // 0.83 -> 1.502 FAPH on DipCo
+          #id(hey_mycroft).set_probability_cutoff(237);  // 0.93 -> 1.878 FAPH on DipCo
           id(jarvis).set_probability_cutoff(212);   // 0.83 -> 1.502 FAPH on DipCo
         }
 
