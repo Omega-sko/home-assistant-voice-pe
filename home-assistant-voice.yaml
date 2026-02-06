@@ -1715,7 +1715,7 @@ micro_wake_word:
   id: mww
   microphone:
     microphone: i2s_mics
-    channels: 2
+    channels: 1
     gain_factor: 4
   stop_after_detection: false
   models:
