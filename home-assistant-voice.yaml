@@ -1698,13 +1698,13 @@ external_components:
       url: https://github.com/esphome/esphome
       ref: a6c0a861a014e64c67d46115eba8e5370777b80a
     components: [mdns, sendspin]
-  - source:
+  #- source:
       # https://github.com/esphome/esphome/pull/12429
-      type: git
-      url: https://github.com/esphome/esphome
-      ref: 928204066ce0082404573ea1c6a0b58aeebbd7c6
-    refresh: 0s
-    components: [file, http_request, media_source, speaker_source]
+      #type: git
+      #url: https://github.com/esphome/esphome
+      #ref: 928204066ce0082404573ea1c6a0b58aeebbd7c6
+    #refresh: 0s
+    #components: [file, http_request, media_source, speaker_source]
 
 audio_dac:
   - platform: aic3204
